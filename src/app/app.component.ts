@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(
     private formBuilder: FormBuilder,
     private service: Service
-  ){
+  ) {
     this.form = this.formBuilder.group({
       cap_shape: ['', Validators.required],
       cap_surface: ['', Validators.required],
@@ -44,14 +44,16 @@ export class AppComponent {
   }
 
 
-  public sendData(){
+  public sendData() {
     const body = this.form.getRawValue();
     this.service.checkMushroom(body)
-      .subscribe( result => {
-        if(result === 'p'){
+      .subscribe(result => {
+        if (result === 'p') {
           this.poisonous = true;
-        }else this.poisonous = false;
-
+        }
+        else {
+          this.poisonous = false;
+        }
         this.submitted = true;
       })
   }
