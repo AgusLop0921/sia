@@ -294,13 +294,18 @@
         <div class="row px-3 mt-5">
           <button class="btn btn-primary" (click)="sendData()" [disabled]="!form.valid">Enviar</button>
         </div>
+        <div *ngIf="error" class="row pt-4 pl-3">
+          <div class="alert alert-danger" role="alert">
+            Ocurrio un problema en el servidor
+          </div>
+        </div>
       </form>
 
-      <div *ngIf="submitted" class="row mt-5 w-100 main-container">
-        <div *ngIf="poisonous" class="card-danger p-5">
+      <div *ngIf="submitted" class="row mt-5 w-100 pl-3">
+        <div *ngIf="!poisonous" class="card-danger p-3">
           <h2>Es venenoso!</h2>
         </div>
-        <div *ngIf="!poisonous" class="card-ok p-5">
+        <div *ngIf="!poisonous" class="card-ok p-3">
           <h2>Es comestible!</h2>
         </div>
       </div>

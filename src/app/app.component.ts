@@ -12,7 +12,8 @@ export class AppComponent {
   title = 'mushroom';
   public shape;
   public poisonous: boolean;
-  public submitted = false;;
+  public submitted = false;
+  public error = false;
   constructor(
     private formBuilder: FormBuilder,
     private service: Service
@@ -46,6 +47,7 @@ export class AppComponent {
 
   public sendData() {
     this.submitted = false;
+    this.error = false;
     const body = this.form.getRawValue();
     this.service.checkMushroom(body)
       .subscribe(result => {
@@ -57,7 +59,7 @@ export class AppComponent {
         }
         this.submitted = true;
       }, error => {
-        alert("Ocurrio un problema en el servidor");
+        this.error = true;
       })
   }
 }
