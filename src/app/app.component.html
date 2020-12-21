@@ -1,232 +1,308 @@
-<div class="row mb-5 main-container">
-  <h2>Analizador de Hongos</h2>
-  <div class="row px-5">
-    <form [formGroup]="form">
-      <select class="selectTag" name="miselect" formControlName="cap_shape">
-        <option value="" disabled="disabled">Forma del sombrero</option>
-        <option value="b">Campana</option>
-        <option value="c">Cónica</option>
-        <option value="x">convexa</option>
-        <option value="f">Plana</option>
-        <option value="k">Nudosa</option>
-        <option value="s">Hundida</option>
-      </select>
+<div class="containe-fluid mt-4">
 
-      <select class="selectTag" name="miselect" formControlName="cap_surface">
-        <option value="" disabled="disabled">Superficie del sombrero</option>
-        <option value="f">Fibrosa</option>
-        <option value="g">Ranuras</option>
-        <option value="y">Escamosa</option>
-        <option value="s">Lisa</option>
-      </select>
+  <div class="row mb-5">
+    <div class="row px-5">
+      <h2>Analizador de Hongos</h2>
 
-      <select class="selectTag" name="miselect" formControlName="cap_color">
-        <option value="" disabled="disabled">Color del sombrero</option>
-        <option value="n">Marron</option>
-        <option value="b">Beige</option>
-        <option value="c">Canela</option>
-        <option value="g">Gris</option>
-        <option value="r">Verde</option>
-        <option value="p">Rosa</option>
-        <option value="u">Purpura</option>
-        <option value="e">Rojo</option>
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="bruises">
-        <option value="" disabled="disabled">Tiene moretones?</option>
-        <option value="t">Si</option>
-        <option value="f">No</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="odor">
-        <option value="" disabled="disabled">Olor</option>
-        <option value="a">Almendra</option>
-        <option value="l">Anís</option>
-        <option value="c">Creosota</option>
-        <option value="y">A pescado</option>
-        <option value="f">Mal olor</option>
-        <option value="m">Rancio</option>
-        <option value="n">No tiene olor</option>
-        <option value="p">Amargo</option>
-        <option value="s">Picante</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="gill_attachment">
-        <option value="" disabled="disabled">Accesorio branquial</option>
-        <option value="a">Adjunto</option>
-        <!-- <option value="d" >Descendente</option> -->
-        <option value="f">Libre</option>
-        <!-- <option value="n" >Entallado</option> -->
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="gill_spacing">
-        <option value="" disabled="disabled">Espaciado branquial</option>
-        <option value="c">Corto</option>
-        <option value="w">Largo</option>
-        <!-- <option value="d" >Distante</option> -->
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="gill_size">
-        <option value="" disabled="disabled">Tamaño branquial</option>
-        <option value="b">Ancho</option>
-        <option value="n">Angosto</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="gill_color">
-        <option value="" disabled="disabled">Color branquial</option>
-        <option value="k">Negro</option>
-        <option value="n">Marron</option>
-        <option value="b">Beige</option>
-        <option value="h">Chocolate</option>
-        <option value="g">Gris</option>
-        <option value="r">Verde</option>
-        <option value="o">Naranja</option>
-        <option value="p">Rosa</option>
-        <option value="u">Purpura</option>
-        <option value="e">Roja</option>
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_shape">
-        <option value="" disabled="disabled">Forma de tallo</option>
-        <option value="e">Redondeado</option>
-        <option value="t">Afilado</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_root">
-        <option value="" disabled="disabled">Tallo de la raíz</option>
-        <option value="b">Bulboso</option>
-        <option value="c">Club</option>
-        <!-- <option value="u" >Copa</option> -->
-        <option value="e">Igual</option>
-        <!-- <option value="z" >Rizomorfos</option> -->
-        <option value="r">Enraizado</option>
-        <option value="?">Indeterminado</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_surface_above_ring">
-        <option value="" disabled="disabled">Superficie del tallo sobre el anillo</option>
-        <option value="f">Fibroso</option>
-        <option value="y">Escamoso</option>
-        <option value="k">Sedoso</option>
-        <option value="s">Liso</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_surface_below_ring">
-        <option value="" disabled="disabled">Superficie del tallo debajo del anillo</option>
-        <option value="f">Fibroso</option>
-        <option value="y">Escamoso</option>
-        <option value="k">Sedoso</option>
-        <option value="s">Liso</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_color_above_ring">
-        <option value="" disabled="disabled">Color del tallo sobre el anillo</option>
-        <option value="n">Marron</option>
-        <option value="b">Beige</option>
-        <option value="c">Canela</option>
-        <option value="g">Gris</option>
-        <option value="o">Naranja</option>
-        <option value="p">Rosa</option>
-        <option value="e">Rojo</option>
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="stalk_color_below_ring">
-        <option value="" disabled="disabled">Color del tallo debajo del anillo</option>
-        <option value="n">Marron</option>
-        <option value="b">Beige</option>
-        <option value="c">Canela</option>
-        <option value="g">Gris</option>
-        <option value="o">Naranja</option>
-        <option value="p">Rosa</option>
-        <option value="e">Rojo</option>
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-      </select>
-
-
-      <select class="selectTag" name="miselect" formControlName="veil_type">
-        <option value="" disabled="disabled">Tipo de velo</option>
-        <option value="p">Parcial</option>
-        <!-- <option value="u" >Universal</option> -->
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="veil_color">
-        <option value="" disabled="disabled">Color del velo</option>
-        <option value="n">Marron</option>
-        <option value="o">Naranja</option>
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="ring_number">
-        <option value="" disabled="disabled">Cantidad de anillos</option>
-        <option value="n">Ninguno</option>
-        <option value="o">Uno</option>
-        <option value="t">Dos</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="ring_type">
-        <option value="" disabled="disabled">Tipo de anillo</option>
-        <option value="e">Evanescente</option>
-        <option value="f">Resplandeciente</option>
-        <option value="l">Grande</option>
-        <option value="n">Ninguno</option>
-        <option value="p">Colgante</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="spore_print_color">
-        <option value="" disabled="disabled">Color de esporas</option>
-        <option value="k">Negro</option>
-        <option value="n">Marron</option>
-        <option value="b">Beige</option>
-        <option value="h">Chocolate</option>
-        <option value="r">Verde</option>
-        <option value="o">Naranja</option>
-        <!-- <option value="p" >Purpura</option> -->
-        <option value="w">Blanco</option>
-        <option value="y">Amarillo</option>
-        <!-- <option value="u" >Amarillo</option> -->
-
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="population">
-        <option value="" disabled="disabled">Población</option>
-        <option value="a">Abundante</option>
-        <option value="c">Agrupada</option>
-        <option value="n">Numerosa</option>
-        <option value="s">Disperso</option>
-        <option value="v">Varios</option>
-        <option value="y">Solitario</option>
-      </select>
-
-      <select class="selectTag" name="miselect" formControlName="habitat">
-        <option value="" disabled="disabled">Hábitat</option>
-        <option value="g">Pastos</option>
-        <option value="l">Hojas</option>
-        <option value="m">Prados</option>
-        <option value="p">Caminos</option>
-        <option value="u">Urbano</option>
-        <option value="w">Residuos</option>
-        <option value="d">Bosques</option>
-      </select>
-      <div class="row main-container mt-5">
-        <button class="btn btn-primary" (click)="sendData()">Enviar</button>
+    </div>
+    <div class="row my-3 px-5 text-center">
+      <div class="row px-3">
+        <h5>Para obtener una estimación sobre si un hongo es comestible o venenoso, seleccione todas las características
+          fisionómicas requeridas en el formulario y presione enviar.
+        </h5>
       </div>
-    </form>
 
+    </div>
+    <div class="row px-5">
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col-md-2">
+            <label for="miselect">Forma del sombrero</label>
+            <select class="selectTag" name="miselect" formControlName="cap_shape">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="b">Campana</option>
+              <option value="c">Cónica</option>
+              <option value="x">Convexa</option>
+              <option value="f">Plana</option>
+              <option value="k">Nudosa</option>
+              <option value="s">Hundida</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Superficie del sombrero</label>
+            <select class="selectTag" name="miselect" formControlName="cap_surface">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="f">Fibrosa</option>
+              <option value="g">Ranuras</option>
+              <option value="y">Escamosa</option>
+              <option value="s">Lisa</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Color del sombrero</label>
+            <select class="selectTag" name="miselect" formControlName="cap_color">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="n">Marron</option>
+              <option value="b">Beige</option>
+              <option value="c">Canela</option>
+              <option value="g">Gris</option>
+              <option value="r">Verde</option>
+              <option value="p">Rosa</option>
+              <option value="u">Purpura</option>
+              <option value="e">Rojo</option>
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Tiene moretones?</label>
+            </div>
+            <select class="selectTag" name="miselect" formControlName="bruises">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="t">Si</option>
+              <option value="f">No</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
 
-    <div *ngIf="submitted" class="row mt-5 w-100 main-container">
-      <div *ngIf="poisonous" class="card-danger p-5">
-        <h2>Es venenoso! D:</h2>
-      </div>
-      <div *ngIf="!poisonous" class="card-ok p-5">
-        <h2>Podes comerlo! :D</h2>
+              <label for="miselect">Olor</label>
+            </div>
+            <select class="selectTag" name="miselect" formControlName="odor">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="a">Almendra</option>
+              <option value="l">Anís</option>
+              <option value="c">Creosota</option>
+              <option value="y">A pescado</option>
+              <option value="f">Mal olor</option>
+              <option value="m">Rancio</option>
+              <option value="n">No tiene olor</option>
+              <option value="p">Amargo</option>
+              <option value="s">Picante</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Accesorio branquial</label>
+            <select class="selectTag" name="miselect" formControlName="gill_attachment">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="a">Adjunto</option>
+              <!-- <option value="d" >Descendente</option> -->
+              <option value="f">Libre</option>
+              <!-- <option value="n" >Entallado</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <label for="miselect">Espaciado branquial</label>
+            <select class="selectTag" name="miselect" formControlName="gill_spacing">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="c">Corto</option>
+              <option value="w">Largo</option>
+              <!-- <option value="d" >Distante</option> -->
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Tamaño branquial</label>
+            <select class="selectTag" name="miselect" formControlName="gill_size">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="b">Ancho</option>
+              <option value="n">Angosto</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Color branquial</label>
+
+            </div>
+            <select class="selectTag" name="miselect" formControlName="gill_color">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="k">Negro</option>
+              <option value="n">Marron</option>
+              <option value="b">Beige</option>
+              <option value="h">Chocolate</option>
+              <option value="g">Gris</option>
+              <option value="r">Verde</option>
+              <option value="o">Naranja</option>
+              <option value="p">Rosa</option>
+              <option value="u">Purpura</option>
+              <option value="e">Roja</option>
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Forma de tallo</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_shape">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="e">Redondeado</option>
+              <option value="t">Afilado</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Tallo de la raíz</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_root">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="b">Bulboso</option>
+              <option value="c">Club</option>
+              <!-- <option value="u" >Copa</option> -->
+              <option value="e">Igual</option>
+              <!-- <option value="z" >Rizomorfos</option> -->
+              <option value="r">Enraizado</option>
+              <option value="?">Indeterminado</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Superficie del tallo sobre el anillo</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_surface_above_ring">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="f">Fibroso</option>
+              <option value="y">Escamoso</option>
+              <option value="k">Sedoso</option>
+              <option value="s">Liso</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <label for="miselect">Superficie del tallo debajo del anillo</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_surface_below_ring">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="f">Fibroso</option>
+              <option value="y">Escamoso</option>
+              <option value="k">Sedoso</option>
+              <option value="s">Liso</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Color del tallo sobre el anillo</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_color_above_ring">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="n">Marron</option>
+              <option value="b">Beige</option>
+              <option value="c">Canela</option>
+              <option value="g">Gris</option>
+              <option value="o">Naranja</option>
+              <option value="p">Rosa</option>
+              <option value="e">Rojo</option>
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Color del tallo debajo del anillo</label>
+            <select class="selectTag" name="miselect" formControlName="stalk_color_below_ring">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="n">Marron</option>
+              <option value="b">Beige</option>
+              <option value="c">Canela</option>
+              <option value="g">Gris</option>
+              <option value="o">Naranja</option>
+              <option value="p">Rosa</option>
+              <option value="e">Rojo</option>
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Color del velo</label>
+
+            </div>
+            <select class="selectTag" name="miselect" formControlName="veil_color">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="n">Marron</option>
+              <option value="o">Naranja</option>
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Cantidad de anillos</label>
+            <select class="selectTag" name="miselect" formControlName="ring_number">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="n">Ninguno</option>
+              <option value="o">Uno</option>
+              <option value="t">Dos</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="miselect">Tipo de anillo</label>
+            <select class="selectTag" name="miselect" formControlName="ring_type">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="e">Evanescente</option>
+              <option value="f">Resplandeciente</option>
+              <option value="l">Grande</option>
+              <option value="n">Ninguno</option>
+              <option value="p">Colgante</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Color de esporas</label>
+
+            </div>
+            <select class="selectTag" name="miselect" formControlName="spore_print_color">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="k">Negro</option>
+              <option value="n">Marron</option>
+              <option value="b">Beige</option>
+              <option value="h">Chocolate</option>
+              <option value="r">Verde</option>
+              <option value="o">Naranja</option>
+              <!-- <option value="p" >Purpura</option> -->
+              <option value="w">Blanco</option>
+              <option value="y">Amarillo</option>
+              <!-- <option value="u" >Amarillo</option> -->
+
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Población</label>
+
+            </div>
+            <select class="selectTag" name="miselect" formControlName="population">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="a">Abundante</option>
+              <option value="c">Agrupada</option>
+              <option value="n">Numerosa</option>
+              <option value="s">Disperso</option>
+              <option value="v">Varios</option>
+              <option value="y">Solitario</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <div class="row px-3">
+              <label for="miselect">Hábitat</label>
+
+            </div>
+            <select class="selectTag" name="miselect" formControlName="habitat">
+              <option disabled selected>Selecciona una opción</option>
+              <option value="g">Pastos</option>
+              <option value="l">Hojas</option>
+              <option value="m">Prados</option>
+              <option value="p">Caminos</option>
+              <option value="u">Urbano</option>
+              <option value="w">Residuos</option>
+              <option value="d">Bosques</option>
+            </select>
+          </div>
+        </div>
+        <div class="row px-3 mt-5">
+          <button class="btn btn-primary" (click)="sendData()" [disabled]="!form.valid">Enviar</button>
+        </div>
+      </form>
+
+      <div *ngIf="submitted" class="row mt-5 w-100 main-container">
+        <div *ngIf="poisonous" class="card-danger p-5">
+          <h2>Es venenoso!</h2>
+        </div>
+        <div *ngIf="!poisonous" class="card-ok p-5">
+          <h2>Es comestible!</h2>
+        </div>
       </div>
     </div>
   </div>

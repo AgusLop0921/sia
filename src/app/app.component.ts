@@ -33,7 +33,7 @@ export class AppComponent {
       stalk_surface_below_ring: ['', Validators.required],
       stalk_color_above_ring: ['', Validators.required],
       stalk_color_below_ring: ['', Validators.required],
-      veil_type: ['', Validators.required],
+      veil_type: ['p', Validators.required],
       veil_color: ['', Validators.required],
       ring_number: ['', Validators.required],
       ring_type: ['', Validators.required],
@@ -48,7 +48,7 @@ export class AppComponent {
     const body = this.form.getRawValue();
     this.service.checkMushroom(body)
       .subscribe(result => {
-        if (result === 'p') {
+        if (result.result === 'p') {
           this.poisonous = true;
         }
         else {
