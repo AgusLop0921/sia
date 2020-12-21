@@ -45,6 +45,7 @@ export class AppComponent {
 
 
   public sendData() {
+    this.submitted = false;
     const body = this.form.getRawValue();
     this.service.checkMushroom(body)
       .subscribe(result => {
