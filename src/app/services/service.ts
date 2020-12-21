@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class Service {
-  private apiUrl = "http://localhost:4200/"
+  private apiUrl = "http://localhost:5000/"
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
