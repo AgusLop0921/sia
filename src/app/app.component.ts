@@ -56,6 +56,8 @@ export class AppComponent {
           this.poisonous = false;
         }
         this.submitted = true;
+      }, error => {
+        alert("Ocurrio un problema en el servidor");
       })
   }
 }
