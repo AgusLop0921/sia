@@ -13,6 +13,7 @@ export class AppComponent {
   public shape;
   public poisonous: boolean;
   public submitted = false;
+  public submitting = false;
   public error = false;
   constructor(
     private formBuilder: FormBuilder,
@@ -47,6 +48,7 @@ export class AppComponent {
 
   public sendData() {
     this.submitted = false;
+    this.submitting = true;
     this.error = false;
     const body = this.form.getRawValue();
     this.service.checkMushroom(body)
@@ -58,8 +60,10 @@ export class AppComponent {
           this.poisonous = false;
         }
         this.submitted = true;
+        this.submitting = false;
       }, error => {
         this.error = true;
+        this.submitting = false;
       })
   }
 }

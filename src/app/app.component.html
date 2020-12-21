@@ -291,8 +291,13 @@
             </select>
           </div>
         </div>
-        <div class="row px-3 mt-5">
+        <div *ngIf="!submitting" class="row px-3 mt-5">
           <button class="btn btn-primary" (click)="sendData()" [disabled]="!form.valid">Enviar</button>
+        </div>
+        <div *ngIf="submitting" class="row mt-5">
+          <div class=" col-md-2 text-center pl-5 ml-2">
+            <div class="spinner-border"></div>
+          </div>
         </div>
         <div *ngIf="error" class="row pt-4 pl-3">
           <div class="alert alert-danger" role="alert">
@@ -302,7 +307,7 @@
       </form>
 
       <div *ngIf="submitted" class="row mt-5 w-100 pl-3">
-        <div *ngIf="!poisonous" class="card-danger p-3">
+        <div *ngIf="poisonous" class="card-danger p-3">
           <h2>Es venenoso!</h2>
         </div>
         <div *ngIf="!poisonous" class="card-ok p-3">
