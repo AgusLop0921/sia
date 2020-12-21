@@ -5,7 +5,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class Service {
-  private apiUrl = "http://localhost:4200/"
+  private apiUrl = "https://pypi.org/simple"
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
